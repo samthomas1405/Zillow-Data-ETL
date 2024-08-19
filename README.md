@@ -5,4 +5,6 @@ This repository contains code for an end-to-end ETL pipeline with Apache Airflow
 <img width="904" alt="dag" src="https://github.com/user-attachments/assets/c4fe401c-8810-41bb-8438-e878ad1519e6">
 
 ## QuickSight Analytics
+<img width="808" alt="zillow_analytics" src="https://github.com/user-attachments/assets/0e5be674-5d6e-4cfa-910b-bf6d920599d2">
+
 
