@@ -3,6 +3,16 @@ This repository contains code for an end-to-end ETL pipeline with Apache Airflow
 
 ## Pipeline Architecture
 <img width="1322" alt="architecture" src="https://github.com/user-attachments/assets/b17b7d3c-5215-4380-a963-fe7583872710">
+Displayed above is a diagram that models the flow of the data pipeline. Here is a detailed explanation of the 9 pipeline steps:
+1. Zillow API: The Zillow RapidAPI is used to fetch data of 123 properties from Fishkill, New York.
+2. Python: Python script is utilized to extract data from the API in JSON format.
+3. 1st S3 Bucket: Extracted data is transferred into an AWS S3 bucket for further processing.
+4. 1st Lambda Function: A lambda function is triggered to copy the raw JSON data to ensure the original data is preserved.
+5. 2nd S3 Bucket: The copied data is transferred into a second S3 bucket.
+6. 2nd Lambda Function: A second lambda function is triggered to transform the JSON data into a csv file with selective categories such as number of bathrooms, number of bedrooms, price, total area, etc.
+7. 3rd S3 Bucket. The transformed data is then transferred into a third S3 bucket.
+8. Amazon Redshift: The csv data is transferred into an Amazon Redshift cluster for accessible data storage and analysis.
+9. Amazon QuickSight: The Amazon Redshift cluster is imported into Amazon QuickSight in order to provide elaborate visualizations of the data from the 123 properties.
 
 ## DAG View
 <img width="904" alt="dag" src="https://github.com/user-attachments/assets/c4fe401c-8810-41bb-8438-e878ad1519e6">
