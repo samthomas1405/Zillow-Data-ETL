@@ -2,7 +2,7 @@
 This repository contains code for an end-to-end ETL pipeline with Apache Airflow using Python bash scripts in order to migrate data to the AWS cloud. Uses Zillow RapidAPI to extract real estate property data of 123 properties from Fishkill, New York, transform the data into a csv file using Amazon lambda functions, and then load the clean data into an Amazon s3 bucket. The pipeline then transfers clean data into an Amazon Redshift cluster to perform analytics and connects the cluster to Amazon QuickSight to visualize various data models.
 
 ## Pipeline Architecture
-<img width="1322" alt="architecture" src="https://github.com/user-attachments/assets/b17b7d3c-5215-4380-a963-fe7583872710">
+<img width="1322" alt="architecture" src="https://github.com/user-attachments/assets/b17b7d3c-5215-4380-a963-fe7583872710"><br><br>
 Displayed above is a diagram that models the flow of the data pipeline. Here is a detailed explanation of the 9 pipeline steps:<br><br>
 
 1. Zillow API: The Zillow RapidAPI is used to fetch data of 123 properties from Fishkill, New York.
