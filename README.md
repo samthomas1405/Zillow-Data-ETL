@@ -5,6 +5,8 @@ This repository contains code for an end-to-end ETL pipeline with Apache Airflow
 <img width="1322" alt="architecture" src="https://github.com/user-attachments/assets/b17b7d3c-5215-4380-a963-fe7583872710">
 Displayed above is a diagram that models the flow of the data pipeline. Here is a detailed explanation of the 9 pipeline steps:
 
+<!-- -->
+
 1. Zillow API: The Zillow RapidAPI is used to fetch data of 123 properties from Fishkill, New York.
 2. Python: Python script is utilized to extract data from the API in JSON format.
 3. 1st S3 Bucket: Extracted data is transferred into an AWS S3 bucket for further processing.
